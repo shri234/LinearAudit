@@ -870,7 +870,10 @@ export default function LinearAuditLanding() {
               </h2>
 
               {/* Button */}
-              <button className="mt-4 md:mt-0 px-6 py-3 border border-white rounded-full text-white text-lg hover:bg-white hover:text-black transition">
+              <button
+                className="mt-4 md:mt-0 px-6 py-3 border border-white rounded-full text-white text-lg hover:bg-white hover:text-black transition"
+                onClick={() => navigate("/contact")}
+              >
                 Get in Touch
               </button>
             </div>
