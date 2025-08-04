@@ -63,16 +63,16 @@ const Footer = () => {
         </div>
         <div>LinearAudit © 2025. All Rights Reserved.</div>
         <div className="flex space-x-4 text-white text-lg">
-          <a href="#">
+          <a>
             <FaFacebookF />
           </a>
-          <a href="#">
+          <a>
             <FaInstagram />
           </a>
-          <a href="#">
+          <a>
             <FaLinkedinIn />
           </a>
-          <a href="#">
+          <a>
             <FaTwitter />
           </a>
         </div>

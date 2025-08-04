@@ -9,13 +9,6 @@ const TopNav = ({
 }) => {
   const navigate = useNavigate();
 
-  const handleContactClick = (e) => {
-    if (onContactClick) {
-      e.preventDefault();
-      onContactClick();
-    }
-  };
-
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 bg-[#1266D4] ${className}`}
