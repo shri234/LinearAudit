@@ -439,25 +439,29 @@ export default function LinearAuditLanding() {
 
             {/* Mobile Avatar 2 */}
           </section>
-          <section className="py-16 px-6 bg-gray-50 relative overflow-hidden">
+          <section className="py-16 px-6 bg-[#F7FAFC] relative overflow-hidden">
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <h2 className="text-orange-500 text-sm font-semibold tracking-[0.3em] mb-8">
+                <h2 className="text-orange-500 text-sm font-semibold tracking-[0.3em] mb-6">
                   OUR VALUES
                 </h2>
                 <h3 className="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto">
-                  Our identity Is built on the values we live
+                  Our identity Is built,
+                  <br></br>
+                  on the values we live
                 </h3>
               </div>
 
               {/* Values Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16 mb-10">
                 {/* Transparency Card */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                  <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <img className="w-8 h-8 text-white" src="./icon1.svg" />
-                  </div>
+                  <img
+                    className="w-16 h-16 mx-auto mb-6"
+                    src="./icon1.svg"
+                    alt="Transparency icon"
+                  />
                   <h4 className="text-gray-800 text-xl font-semibold">
                     Transparency
                   </h4>
@@ -465,9 +469,11 @@ export default function LinearAuditLanding() {
 
                 {/* Integrity Card */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                  <div className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
+                  <img
+                    className="w-16 h-16 mx-auto mb-6"
+                    src="./icon2.svg"
+                    alt="Integrity icon"
+                  />
                   <h4 className="text-gray-800 text-xl font-semibold">
                     Integrity
                   </h4>
@@ -475,9 +481,11 @@ export default function LinearAuditLanding() {
 
                 {/* Long term partnership Card */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <UserCheck className="w-8 h-8 text-white" />
-                  </div>
+                  <img
+                    className="w-16 h-16 mx-auto mb-6"
+                    src="./icon3.svg"
+                    alt="Long term partnership icon"
+                  />
                   <h4 className="text-gray-800 text-xl font-semibold">
                     Long term partnership
                   </h4>
@@ -485,23 +493,6 @@ export default function LinearAuditLanding() {
               </div>
 
               {/* Background Decorative Elements */}
-              <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                {/* Dotted border pattern */}
-                <div className="absolute top-0 left-0 w-full h-2 border-t-2 border-dashed border-blue-300 opacity-30"></div>
-                <div className="absolute bottom-0 left-0 w-full h-2 border-b-2 border-dashed border-blue-300 opacity-30"></div>
-
-                {/* Background circles */}
-                <div className="absolute top-20 left-10 w-24 h-24 border-2 border-gray-200 rounded-full opacity-20"></div>
-                <div className="absolute bottom-20 right-10 w-32 h-32 border-2 border-gray-200 rounded-full opacity-20"></div>
-                <div className="absolute top-1/2 left-1/4 w-16 h-16 border-2 border-gray-200 rounded-full opacity-20"></div>
-                <div className="absolute top-1/3 right-1/3 w-20 h-20 border-2 border-gray-200 rounded-full opacity-20"></div>
-
-                {/* Small decorative dots */}
-                <div className="absolute top-32 right-1/4 w-3 h-3 bg-gray-300 rounded-full opacity-30"></div>
-                <div className="absolute bottom-32 left-1/3 w-4 h-4 bg-gray-300 rounded-full opacity-30"></div>
-                <div className="absolute top-2/3 left-1/6 w-2 h-2 bg-gray-300 rounded-full opacity-30"></div>
-                <div className="absolute bottom-1/4 right-1/6 w-5 h-5 bg-gray-300 rounded-full opacity-30"></div>
-              </div>
             </div>
           </section>
           <section

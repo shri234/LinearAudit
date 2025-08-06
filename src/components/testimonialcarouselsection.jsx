@@ -65,10 +65,7 @@ export default function TestimonialsCarousel() {
   };
 
   return (
-    <section
-      id="testimonials"
-      className="py-20 px-6 bg-gradient-to-br from-slate-50 to-blue-50"
-    >
+    <section id="testimonials" className="py-20 px-6 bg-[#FFFFFF]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -86,12 +83,12 @@ export default function TestimonialsCarousel() {
         <div className="relative max-w-4xl mx-auto">
           <div className="relative overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out h-[400px]" // Add a fixed height (e.g., h-[400px])
+              className="flex transition-transform duration-500 ease-in-out h-[380px]"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-3xl  p-8 md:p-12 relative overflow-hidden shadow-only-sides">
+                  <div className="bg-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-only-sides h-full flex flex-col">
                     {/* Decorative Quote */}
                     <div className="absolute top-8 right-8 text-purple-100 text-8xl font-serif leading-none select-none">
                       "
@@ -108,12 +105,14 @@ export default function TestimonialsCarousel() {
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 relative z-10">
-                      "{testimonial.text}"
-                    </p>
+                    <div className="flex-1 flex items-center mb-8">
+                      <p className="text-gray-700 text-lg md:text-xl leading-relaxed relative z-10">
+                        "{testimonial.text}"
+                      </p>
+                    </div>
 
                     {/* Author Info */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 mt-auto">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
