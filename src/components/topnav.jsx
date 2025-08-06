@@ -21,7 +21,7 @@ const TopNav = ({
           style={{ height: "48px" }} // match header height
         >
           <img
-            src="/linearaudit-logo.png"
+            src="/Linearaudit-logo.png"
             alt="Linearaudit"
             className="h-8 sm:h-14 w-auto object-contain"
             style={{ maxHeight: "60px" }}
@@ -49,3 +49,4 @@ const TopNav = ({
 };
 
 export default TopNav;
+
