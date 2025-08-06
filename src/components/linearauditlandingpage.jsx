@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import TestimonialsCarousel from "./testimonialcarouselsection";
 import Footer from "./Footer";
+import "../App.css";
 import TopNav from "./topnav";
 
 export default function LinearAuditLanding() {
@@ -38,12 +39,20 @@ export default function LinearAuditLanding() {
   // const [activeTab, setActiveTab] = useState("Registrations");
 
   const tabs = [
-    { id: "Registrations", label: "Registrations", icon: "📝" },
-    { id: "Audit & Assurance", label: "Audit & Assurance", icon: "🔍" },
-    { id: "Taxation", label: "Taxation", icon: "" },
-    { id: "Compliance", label: "Compliance", icon: "✅" },
-    { id: "Business Advisory", label: "Business Advisory", icon: "💼" },
-    { id: "Liner SBM", label: "Liner SBM", icon: "📈" },
+    { id: "Registrations", label: "Registrations", icon: "./Registration.svg" }, // Image path from the public folder
+    {
+      id: "Audit & Assurance",
+      label: "Audit & Assurance",
+      icon: "./audit.svg",
+    },
+    { id: "Taxation", label: "Taxation", icon: "./tax.svg" },
+    { id: "Compliance", label: "Compliance", icon: "/compliances.svg" },
+    {
+      id: "Business Advisory",
+      label: "Business Advisory",
+      icon: "./business.svg",
+    },
+    { id: "Liner SBM", label: "Liner SBM", icon: "liner.svg" },
   ];
 
   const services = {
@@ -238,7 +247,7 @@ export default function LinearAuditLanding() {
         const nextIndex = (currentIndex + 1) % tabs.length;
         return tabs[nextIndex].id;
       });
-    }, 3000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [tabs]);
@@ -260,15 +269,18 @@ export default function LinearAuditLanding() {
         </header>
       </div> */}
 
-        <div className="min-h-screen bg-[#164FBA] relative overflow-hidden">
+        <div className="min-h-screen relative  image-container">
           {/* Header */}
 
           {/* Main Content */}
-          <main className="flex flex-col items-center justify-center min-h-[100vh] px-6 relative z-10">
+          <main className="flex flex-col items-center justify-center min-h-[100vh] px-6 relative z-10 overflow-hidden">
             {/* Badge */}
-            <div className="bg-blue-700/50 border border-blue-400/30 rounded-full px-6 py-2 mb-8">
-              <span className="text-white text-sm">
-                We&nbsp;&nbsp;&nbsp;&nbsp;Simplify Business Compliance
+            <div className="bg-blue-700/50 border border-blue-400/30 rounded-full p-2 mb-8">
+              <span className="bg-blue-700 px-4 py-2 rounded-2xl mr-2 text-white">
+                We
+              </span>
+              <span className="text-white text-sm ">
+                Simplify Business Compliance
               </span>
             </div>
             {/* Main Heading */}
@@ -292,7 +304,7 @@ export default function LinearAuditLanding() {
               Get In Touch
             </button>
 
-            <div className="absolute top-32 left-4 md:left-12 lg:left-20 transform -rotate-28">
+            <div className="absolute top-16 -left-28 md:left-12 lg:left-20 transform -rotate-28">
               {/* Changed inline style width to Tailwind class w-1/2 for better responsiveness */}
               <img
                 src="/HomeLeftPin.png"
@@ -303,13 +315,13 @@ export default function LinearAuditLanding() {
 
             {/* Pen Icon - Top Right */}
             {/* Adjusted right positioning to use Tailwind's responsive scale */}
-            <div className="absolute top-56 right-4 md:right-12 lg:right-24 transform rotate-10">
+            <div className="absolute top-32 md:top-56 -right-24 md:right-12 lg:right-24 transform rotate-10">
               {/* Changed inline style width to Tailwind class w-1/2 for better responsiveness */}
               <img src="/Homepinright.png" className="w-1/2" alt="Pen icon" />
             </div>
 
             {/* Document/Paper - Bottom Left */}
-            <div className="absolute bottom-0 left-0 -rotate-3 w-1/5 sm:w-1/4 md:w-1/5 lg:w-1/6">
+            <div className="absolute bottom-0 left-0 -rotate-3 w-3/6 sm:w-1/4 md:w-1/5 lg:w-1/6">
               <img
                 src="/Homeleftbottomcorner.png"
                 className="w-full h-auto"
@@ -320,7 +332,7 @@ export default function LinearAuditLanding() {
             {/* Calculator/Device - Bottom Right */}
             {/* If w-80 is too small, consider w-1/4 or w-1/3 for relative sizing,
     or a larger fixed width like w-96 or w-[360px] */}
-            <div className="absolute bottom-0 right-0">
+            <div className="absolute md:bottom-0 md:right-0 -bottom-10 -right-28">
               <img
                 src="/Homerightbottomcorner.png"
                 className="w-80 h-auto"
@@ -381,7 +393,7 @@ export default function LinearAuditLanding() {
                 </div>
 
                 {/* Avatar 1 - Top Right - Moved further right and up */}
-                <div className="absolute top-[-58px]  lg:right-[-100px]  transform hidden sm:block">
+                <div className="absolute top-[-130px]  lg:right-[-100px] -right-36 transform">
                   <img
                     src="/aboutus_avatar-1.png"
                     style={{
@@ -392,7 +404,7 @@ export default function LinearAuditLanding() {
                 </div>
 
                 {/* Avatar 2 - Bottom Left - Moved further left and down */}
-                <div className="absolute bottom-[-40px] left-[-20px] md:left-[-10px] lg:left-[20px] xl:left-[60px] transform hidden sm:block">
+                <div className="absolute bottom-[-40px] left-[-20px] md:left-[-10px] lg:left-[20px] xl:left-[60px] transform">
                   <img
                     src="/aboutus_avatar-2.png"
                     style={{
@@ -405,8 +417,8 @@ export default function LinearAuditLanding() {
             </div>
 
             {/* Mobile Avatar Section */}
-            <div className="sm:hidden flex justify-center space-x-8 mt-12">
-              {/* Mobile Avatar 1 */}
+            {/* <div className="sm:hidden flex justify-center space-x-8 mt-12">
+              Mobile Avatar 1
 
               <img
                 src="/aboutus_avatar-2.png"
@@ -423,7 +435,7 @@ export default function LinearAuditLanding() {
                 }}
                 alt="Avatar 1"
               />
-            </div>
+            </div> */}
 
             {/* Mobile Avatar 2 */}
           </section>
@@ -444,7 +456,7 @@ export default function LinearAuditLanding() {
                 {/* Transparency Card */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                   <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <FileCheck className="w-8 h-8 text-white" />
+                    <img className="w-8 h-8 text-white" src="./icon1.svg" />
                   </div>
                   <h4 className="text-gray-800 text-xl font-semibold">
                     Transparency
@@ -509,11 +521,11 @@ export default function LinearAuditLanding() {
                 </div>
 
                 <div
-                  className="hidden absolute top-10 right-8 md:block"
-                  style={{ transform: "rotate(90deg)" }}
+                  className="hidden absolute top-8 right-8 md:block"
+                  // style={{ transform: "rotate(90deg)" }}
                 >
                   <img
-                    src="/servicepins2.png"
+                    src="/pin-right.png"
                     className="w-16 h-auto md:w-24"
                     alt="Service pin right"
                   />
@@ -535,13 +547,17 @@ export default function LinearAuditLanding() {
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 md:px-6 md:py-3 md:text-sm ${
+                        className={`flex px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 md:px-6 md:py-3 md:text-sm ${
                           activeTab === tab.id
                             ? "bg-gray-900 text-white shadow-lg"
                             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                         }`}
                       >
-                        <span className="mr-1 md:mr-2">{tab.icon}</span>
+                        <img
+                          src={tab.icon}
+                          alt={tab.label}
+                          className="mr-1 mr:md-1"
+                        />
                         {tab.label}
                       </button>
                     ))}
@@ -862,10 +878,10 @@ export default function LinearAuditLanding() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
               {/* Text */}
               <h2 className="text-white text-3xl md:text-5xl font-light leading-snug mb-6 md:mb-0">
-                Start the conversation —
+                Start the conversation — We’re listening,
                 <br />
                 <span className="font-bold">
-                  We’re listening, and your next step begins here.
+                  and your next step begins here.
                 </span>
               </h2>
 

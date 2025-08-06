@@ -1,5 +1,12 @@
 import React from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
+import "../App.css";
 
 const testimonials = [
   {
@@ -77,15 +84,14 @@ export default function TestimonialsCarousel() {
 
         {/* Carousel Container */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Testimonial Card */}
           <div className="relative overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-transform duration-500 ease-in-out h-[400px]" // Add a fixed height (e.g., h-[400px])
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+                  <div className="bg-white rounded-3xl  p-8 md:p-12 relative overflow-hidden shadow-only-sides">
                     {/* Decorative Quote */}
                     <div className="absolute top-8 right-8 text-purple-100 text-8xl font-serif leading-none select-none">
                       "
@@ -131,21 +137,21 @@ export default function TestimonialsCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+            className="absolute left-0 mr-10 top-1/2 -translate-y-1/2 -translate-x-6 bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600 group-hover:text-purple-600 transition-colors" />
+            <ArrowLeft className="w-6 h-6 text-gray-600 group-hover:text-purple-600 transition-colors" />
           </button>
 
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600 group-hover:text-purple-600 transition-colors" />
+            <ArrowRight className="w-6 h-6 text-gray-600 group-hover:text-purple-600 transition-colors" />
           </button>
         </div>
 
         {/* Dots Navigation */}
-        <div className="flex justify-center gap-3 mt-12">
+        {/* <div className="flex justify-center gap-3 mt-12">
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -157,10 +163,10 @@ export default function TestimonialsCarousel() {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Client Count */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="inline-flex items-center gap-4 bg-white rounded-full px-8 py-4 shadow-lg">
             <div className="flex -space-x-2">
               {testimonials.slice(0, 4).map((testimonial, index) => (
@@ -177,7 +183,7 @@ export default function TestimonialsCarousel() {
               Clients
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

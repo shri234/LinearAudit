@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white pt-10">
       {/* Top: Logo and Nav */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center pb-6 border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center pb-0 border-b border-gray-800">
         <div className="mb-8 md:mb-0">
           <img
             src="/logo.svg"
@@ -43,8 +43,9 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto px-6 py-6">
         <div className="bg-[#1e1e1e] rounded-lg px-6 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-sm text-gray-300">
-            No 36-B, Karthikeyan Salai, Periyar Nagar, Chennai 600 082. (opp. to
-            appollo pharmacy)
+            No 36-B, Karthikeyan Salai, Periyar Nagar, Chennai 600 082.
+            <br></br>
+            (opp. to appollo pharmacy)
           </p>
           <button
             className="bg-[#2a2a2a] text-white font-semibold px-5 py-2 rounded-md shadow-sm hover:bg-gray-700 transition"

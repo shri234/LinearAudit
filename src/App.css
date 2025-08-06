@@ -26,6 +26,21 @@
   color: white;
 }
 
+.image-container {
+  background-image: url('./assets/Banner-bg.png');
+  background-size: cover; /* Use cover to ensure the image fills the space */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from tiling */
+  /* Add a fixed height or aspect ratio if needed */
+  height: 100vh; /* Make it exactly the viewport height for testing */
+}
+
+.shadow-only-sides {
+  box-shadow:
+    -10px 0 8px -2px rgba(0, 0, 0, 0.2),
+    10px 0 8px -2px rgba(0, 0, 0, 0.2);
+}
+
 .App-link {
   color: #61dafb;
 }
