@@ -639,7 +639,7 @@ export default function LinearAuditLanding() {
                 {/* Founder 2 */}
                 <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform rotate-[2deg] hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/kiruba.jpg"
+                    src="/Kiruba-Photo.jpg"
                     alt="Kirubakaran B"
                     className="w-20 h-20 rounded-full mb-4 object-cover"
                   />

@@ -12,15 +12,17 @@ const Footer = () => {
     <footer className="bg-black text-white pt-10">
       {/* Top: Logo and Nav */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center pb-0 border-b border-gray-800">
-        <div className="mb-8 md:mb-0">
+        {/* Logo */}
+        <div className="mb-4 md:mb-0 flex-shrink-0">
           <img
             src="/logo.svg"
             alt="LinearAudit Logo"
-            className="w-40 mb-6 md:mb-0"
+            className="w-32 sm:w-40 mb-4 md:mb-0"
           />
-          {/* Replace with your logo image */}
         </div>
-        <nav className="flex space-x-6 text-sm md:text-base">
+
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm sm:text-base">
           <a href="/" className="text-white hover:text-gray-400 font-medium">
             Home
           </a>
