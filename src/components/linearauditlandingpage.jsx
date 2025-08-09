@@ -86,6 +86,36 @@ export default function LinearAuditLanding() {
         readMore: true,
       },
     ],
+    "Linear SBM": [
+      {
+        icon: <Settings className="w-8 h-8" />,
+        title: "SB Management",
+        description:
+          "Full-service management for small businesses. Thrive in competition, we handle complexities, you focus on core activities.",
+        readMore: true,
+      },
+      {
+        icon: <LineChart className="w-8 h-8" />,
+        title: "Linear CFO",
+        description:
+          "Access expert financial guidance with Linear CFO services, tailored for small businesses, driving growth and sustainability.",
+        readMore: true,
+      },
+      {
+        icon: <AlignStartVertical className="w-8 h-8" />,
+        title: "Remote Bookkeeping",
+        description:
+          "Simplify with Linear's Remote Bookkeeping. Ensure accuracy, compliance, and real- time visibility for informed financial decisions.",
+        readMore: true,
+      },
+      {
+        icon: <Users className="w-8 h-8" />,
+        title: "Start-Up Consulting",
+        description:
+          "Our experts will guiding startup success through meticulous business planning, insightful market analysis, & strategic decision- making.",
+        readMore: true,
+      },
+    ],
     "Audit & Assurance": [
       {
         icon: <Pencil className="w-8 h-8" />,
@@ -206,51 +236,19 @@ export default function LinearAuditLanding() {
         readMore: true,
       },
     ],
-    "Liner SBM": [
-      {
-        icon: <Settings className="w-8 h-8" />,
-        title: "SB Management",
-        description:
-          "Full-service management for small businesses. Thrive in competition, we handle complexities, you focus on core activities.",
-        readMore: true,
-      },
-      {
-        icon: <LineChart className="w-8 h-8" />,
-        title: "Linear CFO",
-        description:
-          "Access expert financial guidance with Linear CFO services, tailored for small businesses, driving growth and sustainability.",
-        readMore: true,
-      },
-      {
-        icon: <AlignStartVertical className="w-8 h-8" />,
-        title: "Remote Bookkeeping",
-        description:
-          "Simplify with Linear's Remote Bookkeeping. Ensure accuracy, compliance, and real- time visibility for informed financial decisions.",
-        readMore: true,
-      },
-      {
-        icon: <Users className="w-8 h-8" />,
-        title: "Start-Up Consulting",
-        description:
-          "Our experts will guiding startup success through meticulous business planning, insightful market analysis, & strategic decision- making.",
-        readMore: true,
-      },
-    ],
   };
 
   const [activeTab, setActiveTab] = useState("Registrations");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTab((current) => {
-        const currentIndex = tabs.findIndex((tab) => tab.id === current);
-        const nextIndex = (currentIndex + 1) % tabs.length;
-        return tabs[nextIndex].id;
-      });
-    }, 10000);
+    setActiveTab((current) => {
+      const currentIndex = tabs.findIndex((tab) => tab.id === current);
+      const nextIndex = (currentIndex + 1) % tabs.length;
+      return tabs[nextIndex].id;
+    });
 
-    return () => clearInterval(interval);
-  }, [tabs]);
+    // return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -298,7 +296,7 @@ export default function LinearAuditLanding() {
             </p>
             {/* CTA Button */}
             <button
-              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-colors relative z-10 min-h-[48px] min-w-[120px] touch-manipulation"
               onClick={() => navigate("/contact")}
             >
               Get In Touch
@@ -364,7 +362,7 @@ export default function LinearAuditLanding() {
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <h2 className="text-orange-500 text-sm font-semibold tracking-[0.3em] mb-8">
+                <h2 className="text-orange-600 font-bold text-[30px] mb-6">
                   A B O U T &nbsp;&nbsp; U S
                 </h2>
               </div>
@@ -393,26 +391,6 @@ export default function LinearAuditLanding() {
                 </div>
 
                 {/* Avatar 1 - Top Right - Moved further right and up */}
-                <div className="absolute top-[-130px]  lg:right-[-100px] -right-36 transform">
-                  <img
-                    src="/aboutus_avatar-1.png"
-                    style={{
-                      width: "35%",
-                    }}
-                    alt="Avatar 1"
-                  />
-                </div>
-
-                {/* Avatar 2 - Bottom Left - Moved further left and down */}
-                <div className="absolute bottom-[-40px] left-[-20px] md:left-[-10px] lg:left-[20px] xl:left-[60px] transform">
-                  <img
-                    src="/aboutus_avatar-2.png"
-                    style={{
-                      width: "35%",
-                    }}
-                    alt="Avatar 2"
-                  />
-                </div>
               </div>
             </div>
 
@@ -443,11 +421,11 @@ export default function LinearAuditLanding() {
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <h2 className="text-orange-500 text-sm font-semibold tracking-[0.3em] mb-6">
+                <h2 className="text-orange-600 font-bold tracking-[0.1em] text-[30px] mb-6">
                   OUR VALUES
                 </h2>
                 <h3 className="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto">
-                  Our identity Is built,
+                  Our identity is built
                   <br></br>
                   on the values we live
                 </h3>
@@ -538,7 +516,7 @@ export default function LinearAuditLanding() {
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`flex px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 md:px-6 md:py-3 md:text-sm ${
+                        className={`flex px-4 py-2 rounded-full text-xs font-medium md:px-6 md:py-3 md:text-sm ${
                           activeTab === tab.id
                             ? "bg-gray-900 text-white shadow-lg"
                             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -562,7 +540,7 @@ export default function LinearAuditLanding() {
                     {services[activeTab].map((service, index) => (
                       <div
                         key={index}
-                        className="text-left p-4 hover:bg-gray-50 rounded-lg transition-colors duration-300 md:p-6 md:rounded-xl"
+                        className="text-left p-4 hover:bg-gray-50 rounded-lg md:p-6 md:rounded-xl"
                       >
                         <div className="text-gray-700 mb-3 md:mb-4">
                           {service.icon}
@@ -608,7 +586,7 @@ export default function LinearAuditLanding() {
                 {/* Founder 1 */}
                 <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/vishnu.png"
+                    src="/vishnu-1.jpg"
                     alt="R M Vishnu Kumar"
                     className="w-20 h-20 rounded-full mb-4 object-cover"
                   />
@@ -627,7 +605,7 @@ export default function LinearAuditLanding() {
                     The Institute of Chartered Accountants of India (ICAI).
                   </p>
                   <a
-                    href="https://www.linkedin.com/in/rm-vishnukumar-kumar-109b6187/"
+                    href="https://www.linkedin.com/in/r-m-vishnu-kumar-109b6187/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-700 font-semibold hover:underline"
@@ -639,7 +617,7 @@ export default function LinearAuditLanding() {
                 {/* Founder 2 */}
                 <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform rotate-[2deg] hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/Kiruba-Photo.jpg"
+                    src="/kiruba-1.jpg"
                     alt="Kirubakaran B"
                     className="w-20 h-20 rounded-full mb-4 object-cover"
                   />
@@ -844,9 +822,9 @@ export default function LinearAuditLanding() {
                         99.98%
                       </div>
                       <div className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                        Retention
+                        Client
                         <br />
-                        rate
+                        retention
                       </div>
                     </div>
 
@@ -865,7 +843,7 @@ export default function LinearAuditLanding() {
             </div>
           </section>
           <TestimonialsCarousel />
-          <section className="bg-black py-20 px-6 relative overflow-hidden">
+          <section className="bg-[#0e0e0e] py-20 px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
               {/* Text */}
               <h2 className="text-white text-3xl md:text-5xl font-light leading-snug mb-6 md:mb-0">

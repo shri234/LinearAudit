@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { ReactComponent as Logo } from "../assets/Lineraudit.svg";
 
 const TopNav = ({
   logoHref = "/",
@@ -17,20 +18,16 @@ const TopNav = ({
       <header className="flex items-center justify-between px-2 sm:px-4 md:px-6 lg:px-10 py-4 max-w-full">
         <a
           href={logoHref}
-          className="flex items-center hover:opacity-80 transition-opacity"
+          className="flex items-center ml-8 hover:opacity-80 transition-opacity"
           style={{ height: "48px" }}
         >
-          <img
-            src="/Linearaudit-logo.png"
-            alt="Linearaudit"
-            className="h-8 sm:h-14 w-auto object-contain max-w-[150px] xs:max-w-[120px]"
-          />
+          <Logo className="h-8 sm:h-14 w-auto" />
         </a>
 
         <a
           href={contactHref}
           onClick={() => navigate("/contact")}
-          className="border border-white text-white rounded-md px-2 py-1 sm:px-5 sm:py-2 transition hover:bg-white/20 text-xs sm:text-sm whitespace-nowrap"
+          className="border border-white mr-10 text-white rounded-md px-2 py-1 sm:px-5 sm:py-2 transition hover:bg-white/20 text-xs sm:text-sm whitespace-nowrap"
           style={{
             background: "rgba(255,255,255,0.05)",
             borderRadius: "8px",
@@ -40,7 +37,7 @@ const TopNav = ({
           }}
         >
           <span className="hidden sm:inline">Contact us</span>
-          <span className="sm:hidden">Contact</span>
+          <span className="sm:hidden">Contact us</span>
         </a>
       </header>
     </div>

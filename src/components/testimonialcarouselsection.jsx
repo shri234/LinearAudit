@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     text: "Hassle free service from the firm. Mr. Kirubakaran was very attentive and present during every step of our company registration process. Everything was well explained and presented neatly. Would recommend 10/10.",
-    name: "B",
+    name: "Bala Sankari",
     rating: 5,
     image: "https://randomuser.me/api/portraits/men/12.jpg",
   },
@@ -65,14 +65,17 @@ export default function TestimonialsCarousel() {
   };
 
   return (
-    <section id="testimonials" className="py-20 px-6 bg-[#FFFFFF]">
+    <section
+      id="testimonials"
+      className="py-12 sm:py-20 px-4 sm:px-6 bg-[#FFFFFF]"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <h4 className="text-purple-600 font-semibold tracking-widest text-sm mb-3 uppercase">
             Testimonials
           </h4>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             Voices of trust, Words of impact.
             <br />
             <span className="text-gray-700">Proof of our dedication.</span>
@@ -83,14 +86,14 @@ export default function TestimonialsCarousel() {
         <div className="relative max-w-4xl mx-auto">
           <div className="relative overflow-hidden">
             <div
-              className="flex transition-transform duration-500 ease-in-out h-[380px]"
+              className="flex transition-transform duration-500 ease-in-out h-[500px] sm:h-[380px]"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-only-sides h-full flex flex-col">
+                <div key={index} className="w-full flex-shrink-0 px-2 sm:px-4">
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden shadow-only-sides h-full flex flex-col">
                     {/* Decorative Quote */}
-                    <div className="absolute top-8 right-8 text-purple-100 text-8xl font-serif leading-none select-none">
+                    <div className="absolute top-6 sm:top-8 right-6 sm:right-8 text-purple-300 text-6xl sm:text-8xl font-serif leading-none select-none">
                       "
                     </div>
 
@@ -105,8 +108,8 @@ export default function TestimonialsCarousel() {
                     </div>
 
                     {/* Testimonial Text */}
-                    <div className="flex-1 flex items-center mb-8">
-                      <p className="text-gray-700 text-lg md:text-xl leading-relaxed relative z-10">
+                    <div className="flex-1 flex items-start sm:items-center mb-6 sm:mb-8">
+                      <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed relative z-10">
                         "{testimonial.text}"
                       </p>
                     </div>
@@ -114,7 +117,7 @@ export default function TestimonialsCarousel() {
                     {/* Author Info */}
                     <div className="flex items-center gap-4 mt-auto">
                       <img
-                        src={testimonial.image}
+                        src="/Picture1.jpg"
                         alt={testimonial.name}
                         className="w-16 h-16 rounded-full object-cover border-4 border-purple-100"
                       />
@@ -123,7 +126,7 @@ export default function TestimonialsCarousel() {
                           {testimonial.name}
                         </div>
                         <div className="text-purple-600 font-medium">
-                          Verified Client
+                          Entreprenuer
                         </div>
                       </div>
                     </div>
