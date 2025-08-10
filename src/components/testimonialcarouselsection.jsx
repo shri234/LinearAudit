@@ -72,7 +72,7 @@ export default function TestimonialsCarousel() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
-          <h4 className="text-purple-600 font-semibold tracking-widest text-sm mb-3 uppercase">
+          <h4 className="text-purple-600 font-bold tracking-[0.1em] text-[25px] mb-3 uppercase">
             Testimonials
           </h4>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">

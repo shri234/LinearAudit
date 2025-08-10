@@ -39,7 +39,8 @@ export default function LinearAuditLanding() {
   // const [activeTab, setActiveTab] = useState("Registrations");
 
   const tabs = [
-    { id: "Registrations", label: "Registrations", icon: "./Registration.svg" }, // Image path from the public folder
+    { id: "Registrations", label: "Registrations", icon: "./Registration.svg" },
+    { id: "Linear SBM", label: "Linear SBM", icon: "liner.svg" }, // Image path from the public folder
     {
       id: "Audit & Assurance",
       label: "Audit & Assurance",
@@ -52,7 +53,6 @@ export default function LinearAuditLanding() {
       label: "Business Advisory",
       icon: "./business.svg",
     },
-    { id: "Liner SBM", label: "Liner SBM", icon: "liner.svg" },
   ];
 
   const services = {
@@ -88,28 +88,28 @@ export default function LinearAuditLanding() {
     ],
     "Linear SBM": [
       {
-        icon: <Settings className="w-8 h-8" />,
+        icon: <img src="/settings.png" className="w-8 h-8" />,
         title: "SB Management",
         description:
           "Full-service management for small businesses. Thrive in competition, we handle complexities, you focus on core activities.",
         readMore: true,
       },
       {
-        icon: <LineChart className="w-8 h-8" />,
+        icon: <img src="/line-chart-up.svg" className="w-8 h-8" />,
         title: "Linear CFO",
         description:
           "Access expert financial guidance with Linear CFO services, tailored for small businesses, driving growth and sustainability.",
         readMore: true,
       },
       {
-        icon: <AlignStartVertical className="w-8 h-8" />,
+        icon: <img src="/flex-align-top.svg" className="w-8 h-8" />,
         title: "Remote Bookkeeping",
         description:
           "Simplify with Linear's Remote Bookkeeping. Ensure accuracy, compliance, and real- time visibility for informed financial decisions.",
         readMore: true,
       },
       {
-        icon: <Users className="w-8 h-8" />,
+        icon: <img src="/users-up.svg" className="w-8 h-8" />,
         title: "Start-Up Consulting",
         description:
           "Our experts will guiding startup success through meticulous business planning, insightful market analysis, & strategic decision- making.",
@@ -238,17 +238,7 @@ export default function LinearAuditLanding() {
     ],
   };
 
-  const [activeTab, setActiveTab] = useState("Registrations");
-
-  useEffect(() => {
-    setActiveTab((current) => {
-      const currentIndex = tabs.findIndex((tab) => tab.id === current);
-      const nextIndex = (currentIndex + 1) % tabs.length;
-      return tabs[nextIndex].id;
-    });
-
-    // return () => clearInterval(interval);
-  }, []);
+  const [activeTab, setActiveTab] = useState(tabs[0]?.id || "");
 
   return (
     <div>
@@ -357,12 +347,12 @@ export default function LinearAuditLanding() {
           {/* About Us Section */}
           <section
             id="about-us"
-            className="min-h-screen bg-gray-50 py-16 px-6 relative overflow-hidden"
+            className="min-h-screen bg-[#FFFFFF] py-16 px-6 relative overflow-hidden"
           >
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <h2 className="text-orange-600 font-bold text-[30px] mb-6">
+                <h2 className="text-orange-600 font-bold text-[25px] mb-6">
                   A B O U T &nbsp;&nbsp; U S
                 </h2>
               </div>
@@ -421,7 +411,7 @@ export default function LinearAuditLanding() {
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <h2 className="text-orange-600 font-bold tracking-[0.1em] text-[30px] mb-6">
+                <h2 className="text-orange-600 font-bold tracking-[0.1em] text-[25px] mb-6">
                   OUR VALUES
                 </h2>
                 <h3 className="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto">
@@ -434,7 +424,7 @@ export default function LinearAuditLanding() {
               {/* Values Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16 mb-10">
                 {/* Transparency Card */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:bg-blue-200 transition-colors duration-300 text-center">
                   <img
                     className="w-16 h-16 mx-auto mb-6"
                     src="./icon1.svg"
@@ -446,7 +436,7 @@ export default function LinearAuditLanding() {
                 </div>
 
                 {/* Integrity Card */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:bg-blue-200 transition-colors  duration-300 text-center">
                   <img
                     className="w-16 h-16 mx-auto mb-6"
                     src="./icon2.svg"
@@ -458,7 +448,7 @@ export default function LinearAuditLanding() {
                 </div>
 
                 {/* Long term partnership Card */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:bg-blue-200 transition-colors  duration-300 text-center">
                   <img
                     className="w-16 h-16 mx-auto mb-6"
                     src="./icon3.svg"
@@ -475,7 +465,7 @@ export default function LinearAuditLanding() {
           </section>
           <section
             id="services"
-            className="py-8 px-4 bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden md:py-16 md:px-6"
+            className="py-8 px-4 bg-[#CFDFFE] relative overflow-hidden md:py-16 md:px-6"
           >
             <div className="max-w-7xl mx-auto">
               {/* Header Card */}
@@ -501,10 +491,10 @@ export default function LinearAuditLanding() {
                 </div>
 
                 <div className="text-center">
-                  <h2 className="text-blue-600 text-xs font-semibold tracking-[0.3em] mb-3 md:text-sm md:mb-6">
+                  <h2 className="text-blue-600 font-bold tracking-[0.1em] text-[25px] mb-3 md:mb-6">
                     WHAT WE DO
                   </h2>
-                  <h3 className="text-gray-800 text-2xl font-bold leading-tight max-w-4xl mx-auto mb-6 md:text-3xl lg:text-5xl md:mb-12">
+                  <h3 className="text-[#21231E] text-[36px] font-bold leading-tight max-w-4xl mx-auto mb-6 md:text-3xl lg:text-5xl md:mb-12">
                     From Compliance to Strategy
                     <br />
                     We've got you covered
@@ -572,10 +562,10 @@ export default function LinearAuditLanding() {
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-10">
-                <h2 className="text-orange-500 text-sm font-semibold tracking-[0.3em] mb-5">
+                <h2 className="text-orange-500 font-bold tracking-[0.1em] text-[25px] mb-5">
                   FOUNDERS
                 </h2>
-                <h3 className="text-gray-900 text-3xl md:text-4xl font-bold mb-3">
+                <h3 className="text-gray-700 text-[36px] md:text-4xl font-bold mb-3">
                   Driven by minds,
                   <br />
                   Powered by values.
@@ -586,7 +576,7 @@ export default function LinearAuditLanding() {
                 {/* Founder 1 */}
                 <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/vishnu-1.jpg"
+                    src="/Vishnu-website.png"
                     alt="R M Vishnu Kumar"
                     className="w-20 h-20 rounded-full mb-4 object-cover"
                   />
@@ -617,7 +607,7 @@ export default function LinearAuditLanding() {
                 {/* Founder 2 */}
                 <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform rotate-[2deg] hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/kiruba-1.jpg"
+                    src="/Kiruba-website.png"
                     alt="Kirubakaran B"
                     className="w-20 h-20 rounded-full mb-4 object-cover"
                   />
@@ -652,143 +642,13 @@ export default function LinearAuditLanding() {
               {/* Stats Section */}
               <div className="relative py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
                 {/* Background Geometric Pattern */}
-                <div className="absolute inset-0">
-                  {/* Geometric shapes and lines */}
-                  <svg
-                    className="absolute top-0 left-0 w-full h-full"
-                    viewBox="0 0 1440 800"
-                    preserveAspectRatio="xMidYMid slice"
-                  >
-                    {/* Light blue geometric shapes */}
-                    <polygon
-                      points="0,100 200,50 150,200 50,180"
-                      fill="rgba(59, 130, 246, 0.08)"
-                    />
-                    <polygon
-                      points="300,0 500,80 400,150 250,100"
-                      fill="rgba(59, 130, 246, 0.06)"
-                    />
-                    <polygon
-                      points="800,50 1000,20 950,180 750,150"
-                      fill="rgba(59, 130, 246, 0.08)"
-                    />
-                    <polygon
-                      points="1200,80 1440,40 1400,220 1150,200"
-                      fill="rgba(59, 130, 246, 0.06)"
-                    />
-
-                    {/* Bottom shapes */}
-                    <polygon
-                      points="0,600 250,550 200,750 0,800"
-                      fill="rgba(59, 130, 246, 0.08)"
-                    />
-                    <polygon
-                      points="600,650 850,600 800,800 550,800"
-                      fill="rgba(59, 130, 246, 0.06)"
-                    />
-                    <polygon
-                      points="1100,550 1440,500 1440,800 1050,800"
-                      fill="rgba(59, 130, 246, 0.08)"
-                    />
-
-                    {/* Connecting lines */}
-                    <line
-                      x1="100"
-                      y1="150"
-                      x2="350"
-                      y2="75"
-                      stroke="rgba(59, 130, 246, 0.15)"
-                      strokeWidth="2"
-                    />
-                    <line
-                      x1="450"
-                      y1="115"
-                      x2="825"
-                      y2="115"
-                      stroke="rgba(59, 130, 246, 0.15)"
-                      strokeWidth="2"
-                    />
-                    <line
-                      x1="875"
-                      y1="115"
-                      x2="1175"
-                      y2="140"
-                      stroke="rgba(59, 130, 246, 0.15)"
-                      strokeWidth="2"
-                    />
-
-                    {/* Dots */}
-                    <circle
-                      cx="120"
-                      cy="80"
-                      r="4"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="380"
-                      cy="120"
-                      r="3"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="650"
-                      cy="90"
-                      r="4"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="920"
-                      cy="160"
-                      r="3"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="1280"
-                      cy="110"
-                      r="4"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-
-                    {/* Bottom dots */}
-                    <circle
-                      cx="180"
-                      cy="680"
-                      r="3"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="450"
-                      cy="720"
-                      r="4"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="720"
-                      cy="650"
-                      r="3"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="1050"
-                      cy="700"
-                      r="4"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                    <circle
-                      cx="1320"
-                      cy="680"
-                      r="3"
-                      fill="rgba(59, 130, 246, 0.3)"
-                    />
-                  </svg>
-                </div>
 
                 {/* Content */}
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   {/* Header */}
                   <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                      Let our experties work for you
+                      Let our expertise work for you
                     </h2>
                   </div>
 

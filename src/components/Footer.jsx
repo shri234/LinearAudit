@@ -70,8 +70,8 @@ const Footer = ({
       {/* Bottom Section */}
       <div className="max-w-7xl mx-auto px-6 pb-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
         <div>
-          <span className="text-white">linearaudit@gmail.com</span> |
-          +91-7200319660
+          <span className="text-white">linearaudit@gmail.com</span> |{" "}
+          <span className="text-white">+91-7200319660</span>
         </div>
         <div>LinearAudit © 2025. All Rights Reserved.</div>
         <div className="flex space-x-4 text-white text-lg">
